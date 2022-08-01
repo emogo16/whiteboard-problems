@@ -9,7 +9,7 @@ Whiteboard Problems
 
 ## Description
 
-My personal notes and solutions to whiteboard prompt.
+My personal notes and solutions to whiteboard prompts.
 
 ## Setup/Installation Requirements
 
