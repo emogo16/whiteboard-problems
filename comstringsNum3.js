@@ -11,5 +11,36 @@
 //iterative
 function compressing(string){
   let count = 1;
-  let output = 
-}
+  let answer = "";
+  for (let i = 0; i < string.length; i++) {
+    if(string[i+1] && string[i] === string[i+1]){
+      count++;
+    } else {
+      if (count > 1){
+        answer += count.toString() + string[i];
+      } else {
+        answer += string[i];
+      }
+      count = 1;
+    }
+  }
+  return answer;
+};
+
+console.log(compressing("aaabccdddda"))
+
+
+//recursive
+function compressingRecursive(string){
+  if (string.length === 0)
+  return string;
+  let count = 1;
+  for (let i = 0; string[i] === string[i+1]; i++) count++;
+  if (count > 1) {
+    return count.toString() + string[0] + compressingRecursive(string.substring(count));
+  } else {
+    return string[0] + compressingRecursive(string.substring(1));
+  }
+};
+
+console.log(compressingRecursive("aaabccdddda"));
