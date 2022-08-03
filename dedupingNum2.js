@@ -9,7 +9,7 @@
 
 
 //iterative
-function dedup(array){
+function dedup(array){              //creates function 'dudupingRecursive' that takes 'array' as an argument
   let newArray = [];
   array.forEach(element => {
     if (newArray.includes(element))
